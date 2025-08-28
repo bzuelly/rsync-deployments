@@ -3,7 +3,11 @@
 FROM alpine@sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1
 
 # always force-upgrade rsync to get the latest security fixes
-RUN apk update && apk add --no-cache --upgrade rsync
+RUN echo "Bryan's dockerfile"
+RUN apk update
+RUN apk add --no-cache --upgrade rsync openssh
+
+
 RUN rm -rf /var/cache/apk/*
 
 # Copy entrypoint
