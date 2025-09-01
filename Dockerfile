@@ -8,7 +8,8 @@ RUN dnf update -y
 RUN dnf install -y rsync openssh
 
 # Copy entrypoint
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+##COPY entrypoint.sh /entrypoint.sh
+##RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+##ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/bin/bash"]
